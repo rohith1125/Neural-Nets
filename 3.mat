@@ -1,0 +1,8 @@
+%{
+Generate 3 random vectors s1, s2, s3 of 100 dimensions and normalize them. 
+Calculate the 3 by 3 cosine matrix.  
+Associate the new  s1, s2, s3 with T1, T2, and T3 from exercise 1.  
+Construct an associative matrix and compare the responses R1, R2, R3 to the target vectors.  
+Repeat for 10000 dimensions.
+%}
+
