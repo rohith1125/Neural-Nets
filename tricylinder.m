@@ -10,31 +10,31 @@ z_circle = zeros(size(theta));
 
 % Create circle points at x=0
 x_circle1 = zeros(size(theta));
-y_circle1 = radius * cos(theta);  % Fix: Swap sin and cos
-z_circle1 = radius * sin(theta);  % Fix: Swap sin and cos
+y_circle1 = radius * cos(theta);
+z_circle1 = radius * sin(theta);
 
 % Create circle points at y=0
-x_circle2 = radius * sin(theta);  % Fix: Use sin for x
+x_circle2 = radius * sin(theta);
 y_circle2 = zeros(size(theta));
-z_circle2 = radius * cos(theta);  % Fix: Use cos for z
+z_circle2 = radius * cos(theta);
 
 % Create circle points at z=height
 z_top_circle = height.*ones(size(theta));
 x_top_circle = height.*ones(size(theta));
 y_top_circle = height.*ones(size(theta));
-%%%
-% Translate the red cylinder along the negative x-axis by 2.5 units
+
+% Translate the blue cylinder along the negative x-axis by height/2 units
 z_circle = z_circle - height/2;
 z_top_circle = z_top_circle - height/2;
 
-% Translate the green cylinder along the negative y-axis by 2.5 units
+% Translate the green cylinder along the negative y-axis by height/2 units
 y_circle2 = y_circle2 - height/2;
 y_top_circle = y_top_circle - height/2;
 
-% Translate the red cylinder along the negative x-axis by 2.5 units
+% Translate the red cylinder along the negative x-axis by height/2 units
 x_circle1 = x_circle1 - height/2;
 x_top_circle = x_top_circle - height/2;
-%%%
+
 % Combine points for the surface plot
 x_surface = [x_circle; x_circle];
 y_surface = [y_circle; y_circle];
